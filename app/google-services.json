@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "160019652330",
-    "project_id": "foodiemart-b95ca",
-    "storage_bucket": "foodiemart-b95ca.appspot.com"
+    "project_number": "135100757289",
+    "project_id": "foodiemart-2ba73",
+    "storage_bucket": "foodiemart-2ba73.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:160019652330:android:30a857439adf88ee174193",
+        "mobilesdk_app_id": "1:135100757289:android:ae2704bad01b7409e1f338",
         "android_client_info": {
           "package_name": "com.akmthecoder.foodiemart"
         }
       },
       "oauth_client": [
         {
-          "client_id": "160019652330-qfah75gkd0u898s06jeq4qoblh42rehk.apps.googleusercontent.com",
+          "client_id": "135100757289-t06sgav60ciasji2bp2ppn00762ra3e8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAJq__xswbskx7pIJ31NQHkxnqYlmMFEc8"
+          "current_key": "AIzaSyCu5ZcNqUEpk_-MCpgPitmdT5rtuF2AqKg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "160019652330-qfah75gkd0u898s06jeq4qoblh42rehk.apps.googleusercontent.com",
+              "client_id": "135100757289-t06sgav60ciasji2bp2ppn00762ra3e8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
