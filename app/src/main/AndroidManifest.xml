@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FOODIEMART">
-        <activity android:name=".preScreen.SignInActivity"></activity>
+        <activity
+            android:name=".preScreen.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity android:name=".preScreen.SignInActivity" />
         <activity
             android:name=".preScreen.SignUpActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".preScreen.SplashActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
