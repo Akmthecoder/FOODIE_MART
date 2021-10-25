@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="32dp"
-
+                app:passwordToggleEnabled="true"
                 app:layout_constraintTop_toBottomOf="@id/emailAddress_et"
                 android:layout_height="wrap_content">
 
@@ -108,42 +108,52 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/create_account_btn"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/account_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/password_til"
+                android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/iv0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/create_account_btn"
-                app:layout_constraintTop_toBottomOf="@id/password_til"
                 android:layout_marginTop="16dp"
                 android:padding="24dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@id/create_account_btn"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/create_account_btn"
-                android:text="Create Account"
-                android:textSize="16dp"
-                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/t3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/create_account_btn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"
-                android:text="OR"/>
+                app:layout_constraintTop_toTopOf="@id/account_btn"
+                app:layout_constraintBottom_toBottomOf="@id/account_btn"
+                android:text="Create Account"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"
+                android:text="OR"
+                android:textSize="18dp"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/facebook_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/t3"
+                app:layout_constraintTop_toBottomOf="@id/t4"
                 android:padding="12dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/facebook_btn">
@@ -161,7 +171,7 @@
                     android:src="@drawable/ic_facebook"/>
 
                 <TextView
-                    android:id="@+id/t4"
+                    android:id="@+id/t5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="@id/facebook_btn"
@@ -199,7 +209,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/t5"
+                    android:id="@+id/t6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
