@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_add_special_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:text="Add special instruction"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_special_instruction"
+        android:layout_marginTop="16dp"
+        android:layout_height="1dp" android:background="#DFDFDF"/>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_special_instruction"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/v1"
+        android:padding="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_amount_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rv_special_instruction"
+        app:layout_constraintStart_toStartOf="@id/rv_special_instruction"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Amount Item"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rv_special_instruction"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="1"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/total_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_amount_item"
+        app:layout_constraintStart_toStartOf="@id/rv_special_instruction"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Total Price"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/sumup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_amount_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Rs 80"
+        android:textSize="16dp"
+        android:textColor="#009688"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/v2"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="@id/iv_add_quantity"
+        app:layout_constraintStart_toStartOf="@id/total_price"
+        app:layout_constraintEnd_toStartOf="@id/iv_add_to_cart"
+        app:layout_constraintBottom_toBottomOf="@id/iv_add_quantity"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:padding="24dp"
+        android:background="@drawable/grey_background"/>
+
+
+    <ImageView
+        android:id="@+id/iv_remove_quantity"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_remove"
+        app:layout_constraintStart_toEndOf="@id/tv_quantity_value"
+        app:layout_constraintTop_toTopOf="@+id/iv_add_quantity"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_add_quantity"
+        android:layout_marginEnd="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_quantity_value"
+        android:fontFamily="@font/roboto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:text="1"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_add_quantity"
+        app:layout_constraintTop_toTopOf="@id/iv_add_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/iv_add_quantity" />
+
+    <ImageView
+        android:id="@+id/iv_add_quantity"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_price"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"/>
+
+    <ImageView
+        android:id="@+id/iv_add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/create_account_btn"
+        app:layout_constraintStart_toEndOf="@id/iv_remove_quantity"
+        app:layout_constraintEnd_toEndOf="@id/sumup"
+        app:layout_constraintTop_toTopOf="@id/iv_add_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/iv_add_quantity"
+        android:padding="24dp"
+        android:layout_marginStart="36dp"
+        />
+
+    <TextView
+        android:id="@+id/v4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/iv_add_to_cart"
+        app:layout_constraintTop_toTopOf="@id/iv_add_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/iv_add_quantity"
+        android:layout_marginStart="16dp"
+        android:text="Add to Cart"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/v5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/iv_add_to_cart"
+        app:layout_constraintTop_toTopOf="@id/iv_add_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/iv_add_quantity"
+        android:layout_marginEnd="16dp"
+        android:text="Rs 70"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

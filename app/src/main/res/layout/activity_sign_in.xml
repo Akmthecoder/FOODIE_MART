@@ -61,12 +61,13 @@
                 app:layout_constraintTop_toBottomOf="@id/t1" />
 
             <EditText
-                android:id="@+id/username_et"
+                android:id="@+id/email_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/t2"
                 android:background="@drawable/edittext_background"
-                android:hint="username"
+                android:hint="email"
+                android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="16dp"
                 android:padding="16dp"
@@ -78,7 +79,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="32dp"
                 app:passwordToggleEnabled="true"
-                app:layout_constraintTop_toBottomOf="@id/username_et"
+                app:layout_constraintTop_toBottomOf="@id/email_et"
                 android:layout_height="wrap_content">
 
                 <EditText
@@ -89,6 +90,7 @@
                     app:layout_constraintTop_toBottomOf="@id/emailAddress_et"
                     android:padding="16dp"
                     android:hint="password"
+                    android:inputType="textPassword"
                     android:drawableStart="@drawable/ic_lock"
                     android:drawablePadding="16dp"
                     />

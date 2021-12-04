@@ -10,25 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FOODIEMART">
         <activity
-            android:name=".preScreen.ForgetPasswordActivity"
+            android:name=".home.MyCartActivity"
             android:exported="false" />
-        <activity android:name=".preScreen.SignInActivity" />
-        <activity
-            android:name=".preScreen.SignUpActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
+        <activity android:name=".home.FoodItemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".preScreen.LoginIntoFoodHouseActivity" />
+        <activity android:name=".preScreen.ForgetPasswordActivity" />
+        <activity android:name=".preScreen.SignInActivity" />
         <activity
-            android:name=".home.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".preScreen.SplashActivity"
-            android:exported="true"></activity>
+            android:name=".preScreen.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".home.HomeActivity"></activity>
+        <activity android:name=".preScreen.SplashActivity" />
     </application>
 
 </manifest>
